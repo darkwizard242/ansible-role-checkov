@@ -1,0 +1,28 @@
+---
+galaxy_info:
+  role_name: checkov
+  author: Ali Muhammad
+  description: Installs checkov using pip3 package for performing static code analysis of popular IaC tools.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+    - name: Debian
+      versions:
+        - buster
+
+  galaxy_tags:
+    - checkov
+    - static
+    - python
+    - framework
+    - codeanalysis
+    - os
+    - linux
+
+dependencies: []
