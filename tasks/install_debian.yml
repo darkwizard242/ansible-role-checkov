@@ -1,0 +1,14 @@
+---
+# tasks file for checkov - Debian
+
+- name: Installing {{ checkov_debian_pre_reqs }} on Debian based systems as pre-requisite.
+  package:
+    name: "{{ checkov_debian_pre_reqs }}"
+    state: "{{ checkov_debian_pre_reqs_desired_state }}"
+    force_apt_get: yes
+
+- name: Installing {{ checkov_app_debian_package }} on Debian based systems.
+  pip:
+    executable: "{{ pip_executable }}"
+    name: "{{ checkov_app_debian_package }}"
+    state: "{{ checkov_desired_state }}"
