@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-checkov.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-checkov) ![Ansible Role](https://img.shields.io/ansible/role/49193?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/49193?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/49193?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-checkov&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-checkov) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-checkov?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-checkov?color=orange&style=flat-square)
+[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-checkov.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-checkov) ![Ansible Role](https://img.shields.io/ansible/role/49294?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/49294?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/49294?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-checkov&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-checkov) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-checkov?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-checkov?color=orange&style=flat-square)
 
 # Ansible Role: checkov
 
@@ -28,12 +28,12 @@ checkov_desired_state: present
 ### Variables table:
 
 Variable                              | Value (default)      | Description
-------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------
-checkov_debian_pre_reqs               | python3, python3-pip | Packages required to install AWS CLI on Debian based systems. Using python3 as python2.x is EOL by end of 2020.
-checkov_debian_pre_reqs_desired_state | present              | Desired state for AWS CLI pre-requisite apps on Debian systems.
+------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------
+checkov_debian_pre_reqs               | python3, python3-pip | Packages required to install **checkov** on Debian based systems. Using python3 as python2.x is EOL by end of 2020.
+checkov_debian_pre_reqs_desired_state | present              | Desired state for **checkov** pre-requisite apps on Debian systems.
 pip_executable                        | pip3                 | The executable to utilize for installing **pip** package of `checkov`.
 checkov_app_debian_package            | checkov              | Name of checkov application package require to be installed i.e. `checkov` on Debian based systems.
-checkov_desired_state                 | present              | Desired state for AWS CLI.
+checkov_desired_state                 | present              | Desired state for **checkov**.
 
 ## Dependencies
 
