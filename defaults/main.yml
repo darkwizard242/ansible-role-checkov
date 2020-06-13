@@ -1,0 +1,11 @@
+---
+# defaults file for checkov
+
+checkov_debian_pre_reqs:
+  - python3
+  - python3-pip
+checkov_debian_pre_reqs_desired_state: present
+pip_executable: pip3
+pip_upgrade_version: latest
+checkov_app_debian_package: checkov
+checkov_desired_state: present
