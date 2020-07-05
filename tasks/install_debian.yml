@@ -1,13 +1,13 @@
 ---
-# tasks file for checkov - Debian
+# tasks file for checkov | Debian/Ubuntu Family
 
-- name: Installing {{ checkov_debian_pre_reqs }} on Debian based systems as pre-requisite.
+- name: Debian/Ubuntu Family | Installing {{ checkov_debian_pre_reqs }} as pre-requisite.
   package:
     name: "{{ checkov_debian_pre_reqs }}"
     state: "{{ checkov_debian_pre_reqs_desired_state }}"
     force_apt_get: yes
 
-- name: Installing {{ checkov_app_debian_package }} on Debian based systems.
+- name: Debian/Ubuntu Family | Installing {{ checkov_app_debian_package }}
   pip:
     executable: "{{ pip_executable }}"
     name: "{{ checkov_app_debian_package }}"
