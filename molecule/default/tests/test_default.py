@@ -6,13 +6,25 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
 
+PACKAGE_BINARY = '/usr/local/bin/checkov'
+
+
 def test_checkov_binary_exists(host):
-    assert host.file('/usr/local/bin/checkov').exists
+    """
+    Tests if checkov binary exists.
+    """
+    assert host.file(PACKAGE_BINARY).exists
 
 
 def test_checkov_binary_file(host):
-    assert host.file('/usr/local/bin/checkov').is_file
+    """
+    Tests if checkov binary is a file type.
+    """
+    assert host.file(PACKAGE_BINARY).is_file
 
 
 def test_checkov_binary_which(host):
-    assert host.check_output('which checkov') == '/usr/local/bin/checkov'
+    """
+    Tests the output to confirm checkov's binary location.
+    """
+    assert host.check_output('which checkov') == PACKAGE_BINARY
