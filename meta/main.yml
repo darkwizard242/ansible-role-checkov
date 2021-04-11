@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: checkov
-  author: Ali Muhammad
+  author: darkwizard242
   description: Installs checkov using pip3 package for performing static code analysis of popular IaC tools.
   company: none
   license: MIT
