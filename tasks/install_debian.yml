@@ -2,13 +2,13 @@
 # tasks file for checkov | Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Installing {{ checkov_debian_pre_reqs }} as pre-requisite.
-  package:
+  ansible.builtin.apt:
     name: "{{ checkov_debian_pre_reqs }}"
     state: "{{ checkov_debian_pre_reqs_desired_state }}"
     force_apt_get: yes
 
 - name: Debian/Ubuntu Family | Installing {{ checkov_app_debian_package }}
-  pip:
+  ansible.builtin.pip:
     executable: "{{ pip_executable }}"
     name: "{{ checkov_app_debian_package }}"
     state: "{{ checkov_desired_state }}"
